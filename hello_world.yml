@@ -1,7 +1,9 @@
 - name: Hello World Sample
   hosts: all
+  vars_files:
+    - encrypted.yml
   tasks:
     - name: Hello Message
       debug:
-        msg: "Hello World!"
+        var: vault_message
 
